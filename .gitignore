@@ -1,3 +1,18 @@
+# Flutter
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+.idea/
+.vscode/
+android/.gradle/
+*.iml
+*.lock
+.DS_Store
+
+
 # Miscellaneous
 *.class
 *.log
