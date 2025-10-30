@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-=======
-import 'package:flutter/material.dart';
->>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SupabasePage extends StatefulWidget {
@@ -15,7 +11,6 @@ class SupabasePage extends StatefulWidget {
 }
 
 class _SupabasePageState extends State<SupabasePage> {
-<<<<<<< HEAD
   late SupabaseClient supabase;
   List<dynamic> messages = [];
   final TextEditingController messageController = TextEditingController();
@@ -104,37 +99,21 @@ class _SupabasePageState extends State<SupabasePage> {
       });
     }
   }
-=======
-  final supabase = Supabase.instance.client;
-  List<dynamic> messages = [];
->>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
 
   @override
   void initState() {
     super.initState();
-<<<<<<< HEAD
     _initFuture = initializeAll();
   }
 
   Future<void> initializeAll() async {
     await getKeysAndInit();
     await fetchData();
-=======
-    fetchData();
-  }
-
-  Future<void> fetchData() async {
-    final response = await supabase.from('messages').select();
-    setState(() {
-      messages = response;
-    });
->>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       backgroundColor: const Color(0xFFFDF3F5),
       appBar: AppBar(
         title: const Text('Supabase Messages'),
@@ -221,19 +200,6 @@ class _SupabasePageState extends State<SupabasePage> {
           );
         },
       ),
-=======
-      appBar: AppBar(title: const Text('Supabase Messages')),
-      body: messages.isEmpty
-          ? const Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: messages.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(messages[index]['text']),
-                );
-              },
-            ),
->>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
     );
   }
 }
