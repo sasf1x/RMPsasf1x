@@ -17,7 +17,11 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+<<<<<<< HEAD
             // === Первый блок ===
+=======
+            // === Твой первый блок ===
+>>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
@@ -38,15 +42,25 @@ class MyHomePage extends StatelessWidget {
                           shape: BoxShape.circle,
                           border: Border.all(color: Colors.green, width: 2),
                         ),
+<<<<<<< HEAD
                         child: const Center(
                             child: Text('PHOTO', style: TextStyle(fontSize: 10))),
                       ),
+=======
+                        child: const Center(child: Text('PHOTO', style: TextStyle(fontSize: 10))),
+                      ),
+                      // Добавляем кнопку для перехода
+>>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
+<<<<<<< HEAD
                             MaterialPageRoute(
                                 builder: (context) => const SupabasePage()),
+=======
+                            MaterialPageRoute(builder: (context) => const SupabasePage()),
+>>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
                           );
                         },
                         child: const Text('Перейти к Supabase'),
@@ -154,8 +168,12 @@ class MyHomePage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
+<<<<<<< HEAD
                               MaterialPageRoute(
                                   builder: (context) => const PrefsPage()),
+=======
+                              MaterialPageRoute(builder: (context) => const PrefsPage()),
+>>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
                             );
                           },
                           child: const Text('Перейти к SharedPreferences'),
@@ -171,4 +189,8 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> de3ebfdfd9d8fe9ea05a4809c82bb4a8162b9741
